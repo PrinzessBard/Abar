@@ -14,8 +14,9 @@
 <nav class="navbar navbar-light bg-light">
     <p class="navbar-brand" >ABAR</p>
 	<a class="navbar-brand" href="posts.php" >Posts</a>
-    <a class="navbar-brand" href="#" >Friend</a>
-    <a class="navbar-brand" href="#" >Profile</a>
+    <a class="navbar-brand" href="./Friends.php" >Friend</a>
+    <a class="navbar-brand" href="./Profile.php" >Profile</a>
+    <a class="navbar-brand" href="./exitfffff.php" >Exit</a>
 </nav>
 
 <div class="alert alert-secondary" role="alert">

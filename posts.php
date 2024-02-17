@@ -7,7 +7,6 @@
 
 
     if($_SESSION['user_pass_files_sql'] == $_SESSION['user_pass_files'] and $_SESSION['user_name_files_sql'] == $_SESSION['user_name_files'] ) {
-        $error = 1;
 		$_SESSION['user_name'] = $_SESSION['user_name_files_sql'];
     } else {
         header("Location: Login.php");
@@ -48,5 +47,6 @@ while($row = $result->fetch_assoc()) {
 ?>
 
 <?php
+$mysql->close();
     require_once './blocks/footer.php';
 ?>

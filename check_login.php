@@ -22,7 +22,7 @@ function redirect_to_login() {
 }
 
 function redirect_to_files() {
-    header("Location: posts.php");
+    header("Location: /posts.php");
     exit();
 }
 

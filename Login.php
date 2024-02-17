@@ -3,6 +3,7 @@
     $page = "Login";
     require_once './blocks/header.php';
 ?>
+
 <div class="container" >
     <form action="./check_login.php" method="post" >
 		<input type="text" name="username" placeholder="Name..." class="form-control mt-3" >
