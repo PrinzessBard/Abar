@@ -1,7 +1,9 @@
 <?php
 session_start();
 
-session_unset();
+if($_SESSION['user_id']) {
+    session_unset();
+}
 
 header('Location: index.php');
 exit();

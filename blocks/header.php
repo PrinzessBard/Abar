@@ -13,10 +13,15 @@
 <body>
 <nav class="navbar navbar-light bg-light">
     <p class="navbar-brand" >ABAR</p>
+    <?php
+        session_start();
+        if($_SESSION['user_id']) {
+    ?>
 	<a class="navbar-brand" href="posts.php" >Posts</a>
     <a class="navbar-brand" href="./Friends.php" >Friend</a>
     <a class="navbar-brand" href="./Profile.php" >Profile</a>
-    <a class="navbar-brand" href="./exitfffff.php" >Exit</a>
+    <a class="navbar-brand" href="./exit.php" >Exit</a>
+    <?php } ?>
 </nav>
 
 <div class="alert alert-secondary" role="alert">
