@@ -14,12 +14,12 @@
     }
 
     $mysql = new mysqli("localhost", "root", "root", "abar");
-    $result = $mysql->query("SELECT * FROM `userpost`");
+    $result = $mysql->query("SELECT * FROM `userpost` ORDER BY `userpost`.`id` DESC");
 
 ?>
 <!--<div class="fixed-center w-50 p-3" >-->
     <form action="./check_post.php" method="post" >
-        <input type="text" name="username" class="form-control" placeholder="Name..."> <br>
+        <!-- <input type="text" name="username" class="form-control" placeholder="Name..."> <br> -->
         <input type="text" name="subject" placeholder="Subject..." class="form-control"> <br>
         <textarea name="post" class="form-control" placeholder="Post..." ></textarea>
         <input type="submit" class="btn btn-primary mt-3">
