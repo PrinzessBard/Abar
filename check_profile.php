@@ -9,10 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["image"])) {
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
     // Проверяем размер файла
-    if ($_FILES["image"]["size"] > 500000) {
-        echo "Sorry, your file is too large.";
-        $uploadOk = 0;
-    }
+    // if ($_FILES["image"]["size"] > 500000) {
+    //     echo "Sorry, your file is too large.";
+    //     $uploadOk = 0;
+    // }
 
     // Позволяем только определенные типы файлов
     if (

@@ -12,7 +12,7 @@ if($mysql->connect_error) {
 }
 
 $user_name = $_POST['username'];
-$user_pass = $_POST['userpass'];
+$user_pass = md5($_POST['userpass']);
 $user_bio = $_POST['bio'];
 $user_date = $_POST['date'];
 
@@ -40,8 +40,6 @@ while($row = $result->fetch_assoc()) {
 $mysql->query("INSERT INTO `userdata` (`name`, `pass`, `bio`, `birthday`, `ava`) VALUES ('$user_name', '$user_pass', '$user_bio', '$user_date', 'no')");
 // $mysql->query("INSERT INTO `userdata` (`name`, `pass`) VALUES ('$user_name', '$user_pass')");
 
-echo md5($user_pass);
-
 $mysql->close();
-// header("Location: index.php");
-// exit();
+header("Location: index.php");
+exit();

@@ -28,7 +28,7 @@ function redirect_to_files() {
 
 /////////////////////////////////////
 
-$user_pass = $_POST['userpass'];
+$user_pass = md5($_POST['userpass']);
 $user_name = $_POST['username'];
 $_SESSION['user_pass_files'] = $user_pass;
 $_SESSION['user_name_files'] = $user_name;
