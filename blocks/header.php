@@ -17,15 +17,15 @@
         session_start();
         if($_SESSION['user_id']) {
     ?>
-	<a class="navbar-brand" href="posts.php" >Posts</a>
-    <a class="navbar-brand" href="./Friends.php" >Friend</a>
-    <a class="navbar-brand" href="./Profile.php" >Profile</a>
-    <a class="navbar-brand" href="./exit.php" >Exit</a>
+	<a class="navbar-brand" href="posts.php" >Посты</a>
+    <a class="navbar-brand" href="./Friends.php" >Друзья</a>
+    <a class="navbar-brand" href="./Profile.php" >Профиль</a>
+    <a class="navbar-brand" href="./exit.php" >Выход</a>
     <?php } ?>
 </nav>
 
 <div class="alert alert-secondary" role="alert">
     <h3><?php echo $page; ?></h3>
-    <small class="text-muted">By Holikov Egor</small>
+    <!-- <small class="text-muted">By Holikov Egor</small> -->
 </div>
 <div class="container" >

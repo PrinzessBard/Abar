@@ -37,7 +37,7 @@ while($row = $result->fetch_assoc()) {
 	}
 }
 
-$mysql->query("INSERT INTO `userdata` (`name`, `pass`, `bio`, `birthday`, `ava`) VALUES ('$user_name', '$user_pass', '$user_bio', '$user_date', 'no')");
+$mysql->query("INSERT INTO `userdata` (`name`, `pass`, `bio`, `birthday`, `ava`, `likes`) VALUES ('$user_name', '$user_pass', '$user_bio', '$user_date', 'no', 0)");
 // $mysql->query("INSERT INTO `userdata` (`name`, `pass`) VALUES ('$user_name', '$user_pass')");
 
 $mysql->close();

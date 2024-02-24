@@ -1,6 +1,6 @@
 <?php
 $title = "Abar";
-$page = "Friends";
+$page = "Друзья";
 require_once './blocks/header.php';
 ?>
 
@@ -21,7 +21,11 @@ while($row = $result->fetch_assoc()) {
         <div class="card-body">
             <h5 class="card-title"><?=$row['name']?></h5>
             <p class="card-text"><?=$row['bio']?></p>
-            <button type="submit" class="btn btn-primary">Like</button>
+            <form action="./check_like.php" method="post" >
+                <button type="submit" class="btn btn-primary">Лайк</button>
+                <?php $_SESSION['name_like'] = $row['name']; ?>
+            </form>
+            <span><?=$row['like']?></span>
         </div>
     </div>
 <?php

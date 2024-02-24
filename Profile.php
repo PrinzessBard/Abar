@@ -2,7 +2,7 @@
 session_start();
 
 $title = "Profile";
-$page = "Profile";
+$page = "Профиль";
 require_once "./blocks/header.php";
 
 if($_SESSION['user_pass_files_sql'] == $_SESSION['user_pass_files'] and $_SESSION['user_name_files_sql'] == $_SESSION['user_name_files'] ) {
@@ -22,11 +22,17 @@ $ava = $row['ava'];
 
 <img style="height: 100px" src="<?php echo $ava; ?>" alt="Error...." />
 
+<hr>
+
+<?php if($ava == "no") { ?>
+
 <form action="./check_profile.php" method="post" enctype="multipart/form-data">
     Select image to upload:
     <input type="file" name="image" id="image">
     <input type="submit" value="Upload Image" name="submit">
 </form>
+
+<?php } else { echo ""; } ?>
 
 <div class="list-group">
     <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
@@ -46,13 +52,13 @@ $ava = $row['ava'];
         <p class="mb-1"><?=$row['bio']?></p>
         <small class="text-muted">Что-то еще</small>
     </a>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <!-- <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
         <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Статус</h5>
             <!-- <small class="text-muted">3 days ago</small> -->
-        </div>
+        <!-- </div>
         <p class="mb-1">Готов знакомиться с людьми</p>
-        <small class="text-muted">В разработке</small>
+        <small class="text-muted">В разработке</small> -->
     </a>
 </div>
 

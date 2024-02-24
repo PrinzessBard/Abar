@@ -1,5 +1,5 @@
 <?php
-$title = "Register";
+$title = "Регистрация";
 $page = "Register";
 require_once './blocks/header.php';
 session_start();
@@ -7,10 +7,14 @@ session_start();
 
 <div class="container" >
     <form action="./check_register.php" method="post" >
-        <input type="text" name="username" placeholder="Name..." class="form-control mt-3">
-        <input type="password" name="userpass" placeholder="Password..." class="form-control mt-3">
-        <textarea name="bio" class="form-control mt-3" placeholder="Bio"></textarea>
-        <input type="date" name="date" class="form-control mt-3">
+        <label for="username"><h4>Имя</h4></label>
+        <input type="text" name="username" placeholder="Имя..." class="form-control"> <br>
+        <label for="userpass"><h4>Пароль</h4></label>
+        <input type="password" name="userpass" placeholder="Пароль..." class="form-control"><br>
+        <label for="bio"><h4>Биография</h4></label>
+        <textarea name="bio" class="form-control" placeholder="Немного о себе"></textarea><br>
+        <label for="date"><h4>Дата рождения</h4></label>
+        <input type="date" name="date" class="form-control">
         <input type="submit" class="btn btn-success mt-3" >
     </form>
     <?php

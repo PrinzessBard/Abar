@@ -1,6 +1,6 @@
 <?php
     $title = "Posts";
-    $page = "Posts";
+    $page = "Посты";
     require_once './blocks/header.php';
 
     session_start();
@@ -20,9 +20,9 @@
 <!--<div class="fixed-center w-50 p-3" >-->
     <form action="./check_post.php" method="post" >
         <!-- <input type="text" name="username" class="form-control" placeholder="Name..."> <br> -->
-        <input type="text" name="subject" placeholder="Subject..." class="form-control"> <br>
-        <textarea name="post" class="form-control" placeholder="Post..." ></textarea>
-        <input type="submit" class="btn btn-primary mt-3">
+        <input type="text" name="subject" placeholder="Тема..." class="form-control"> <br>
+        <textarea name="post" class="form-control" placeholder="Текст..." ></textarea>
+        <button type="submit" class="btn btn-primary mt-3" >Выложить</button>
     </form> <hr>
 
 <?php
@@ -38,7 +38,7 @@ while($row = $result->fetch_assoc()) {
             <p class="card-title"><?=$row['text']?></p>
             <form action="./delete_post.php" method="post">
                 <input type="hidden" name="id", value="<?=$row['id']?>">
-                <input type="submit" class="btn btn-danger" value="Delete" >
+                <input type="submit" class="btn btn-danger" value="Удалить" >
             </form>
         </div>
     </div> <br>
